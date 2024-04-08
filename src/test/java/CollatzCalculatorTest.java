@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -13,25 +12,21 @@ public class CollatzCalculatorTest {
         assertThat(collatzCalculator.computeStepCount(1)).isEqualTo(0);
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void testCorrectNumberOfStepsWhenAllStepsAreDivisions() {
         assertThat(collatzCalculator.computeStepCount(16)).isEqualTo(4);
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void testCorrectNumberOfStepsWhenBothStepTypesAreNeeded() {
         assertThat(collatzCalculator.computeStepCount(12)).isEqualTo(9);
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void testAVeryLargeInput() {
         assertThat(collatzCalculator.computeStepCount(1000000)).isEqualTo(152);
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void testZeroIsConsideredInvalidInput() {
         assertThatExceptionOfType(IllegalArgumentException.class)
@@ -39,7 +34,6 @@ public class CollatzCalculatorTest {
                 .withMessage("Only positive integers are allowed");
     }
 
-    @Disabled("Remove to run test")
     @Test
     public void testNegativeIntegerIsConsideredInvalidInput() {
         assertThatExceptionOfType(IllegalArgumentException.class)
