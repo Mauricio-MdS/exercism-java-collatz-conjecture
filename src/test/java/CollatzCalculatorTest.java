@@ -41,4 +41,10 @@ public class CollatzCalculatorTest {
                 .withMessage("Only positive integers are allowed");
     }
 
+    @Test
+    public void testCorrectNumberOfStepsWhenComputeStepCountIsCalledASecondTime() {
+        assertThat(collatzCalculator.computeStepCount(2)).isEqualTo(1);
+        assertThat(collatzCalculator.computeStepCount(2)).isEqualTo(1);
+    }
+
 }
